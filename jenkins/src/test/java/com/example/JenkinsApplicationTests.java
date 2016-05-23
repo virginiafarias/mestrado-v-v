@@ -23,10 +23,6 @@ public class JenkinsApplicationTests {
 		driver.get("http://localhost:8088/");
 		Assert.assertEquals("", driver.findElement(By.id("nome")).getText());
 		Assert.assertEquals("", driver.findElement(By.id("email")).getText());
-	}
-	
-	@Test
-	public void createContato() {
 		
 	}
 	
