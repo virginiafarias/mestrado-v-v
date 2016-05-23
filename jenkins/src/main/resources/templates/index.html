@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Jenkins App</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Contato</h1>
+<p th:text="${mensagem}"></p>
+<p>Último contato cadastrado</p>
+<table>
+	<thead>
+		<tr>
+			<th>Nome</th>
+			<th>Email</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td th:text="${contato.nome}"></td>
+			<td th:text="${contato.email}"></td>
+		</tr>
+	</tbody>
+</table>
+
+<form th:action="@{/estabelecimento/cadastrar}" action="#" method="POST">
+
+	<label>Nome: </label>
+	<input type="text" name="nome" /><br/>
+	<label>Email: </label>
+	<input type="text" name="email" /><br/>
+	
+	<input type="submit" value="Cadastrar"/>
+	
+	
+</form>
+ 
+</body>
+</html>
