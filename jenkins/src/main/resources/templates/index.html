@@ -6,31 +6,20 @@
 </head>
 <body>
 <h1>Contato</h1>
-<p th:text="${mensagem}"></p>
+<p id="message" th:text="${mensagem}"></p>
 <p>Último contato cadastrado</p>
-<table>
-	<thead>
-		<tr>
-			<th>Nome</th>
-			<th>Email</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td th:text="${contato.nome}"></td>
-			<td th:text="${contato.email}"></td>
-		</tr>
-	</tbody>
-</table>
 
-<form th:action="@{/estabelecimento/cadastrar}" action="#" method="POST">
+<h3 id="nome" th:text="${contato.nome}"></h3><br/>
+<h3 id="email" th:text="${contato.email}"></h3><br/>
+
+<form th:action="@{/estabelecimento/cadastrar}" action="#" method="GET">
 
 	<label>Nome: </label>
-	<input type="text" name="nome" /><br/>
+	<input id="nome" type="text" name="nome" /><br/>
 	<label>Email: </label>
-	<input type="text" name="email" /><br/>
+	<input id="email" type="text" name="email" /><br/>
 	
-	<input type="submit" value="Cadastrar"/>
+	<input id="btnSubmit" type="submit" value="Cadastrar"/>
 	
 	
 </form>
