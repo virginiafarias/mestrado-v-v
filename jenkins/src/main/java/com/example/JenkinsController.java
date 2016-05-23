@@ -19,7 +19,7 @@ public class JenkinsController {
 	public String cadastrarContato(@RequestParam("nome") String nome, @RequestParam("email") String email, Model model) {
 		Contato contato = new Contato(nome, email);
 		Respository repository = new RepositoryImpl();
-		repository.salvar(contato);
+		repository.salvar();
 		model.addAttribute("contato", contato);
 		return "index";
 	}
