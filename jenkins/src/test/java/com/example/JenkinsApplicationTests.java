@@ -20,6 +20,8 @@ public class JenkinsApplicationTests {
 	@Test
 	public void getIndex() {
 		//driver.manage().window().maximize();
+		
+		
 		driver.get("http://localhost:8088/");
 		Assert.assertEquals("", driver.findElement(By.id("nome")).getText());
 		Assert.assertEquals("", driver.findElement(By.id("email")).getText());
